@@ -2,7 +2,7 @@ import React from "react"
 
 
 const RecipeShow = () => {
-    return(
+    return (
         <>
         <h2>Welcome</h2>
         
