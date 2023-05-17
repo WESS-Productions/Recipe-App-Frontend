@@ -13,20 +13,27 @@ import Navigation from './pages/Navigation'
 import NotFound from './pages/NotFound'
 import Header from './componets/Header'
 import Footer from './componets/Footer'
+import mockUsers from './mockUsers';
+import mockRecipes from './mockRecipes';
+import { useState } from 'react';
 
 const App = ()=> {
+  const [currentUser, setCurrentUser] = useState(mockUsers[0])
+  const [recipes, setRecipes] = useState(mockRecipes)
+
+
   return(
     <>
     <Header />
     <Routes>
         <Route path='/' element={<RecipeHome />} />
-        <Route path='/recipeindex' element={<RecipeIndex />} />
-        <Route path='/recipeshow' element={<RecipeShow />} />
+        <Route path='/recipeindex' element={<RecipeIndex recipes={recipes}/>} />
+        <Route path='/recipeshow' element={<RecipeShow recipes={recipes}/>} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
         {/* <Route path='/recipeedit' element={<RecipeEdit />} /> */}
-        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes />} />
+        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes}/>} />
         <Route path='/notfound' element={<NotFound />} />
         <Route path='/navigation' element={<Navigation />} />
         <Route path='/header' element={<Header />} />
