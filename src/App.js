@@ -27,7 +27,7 @@ const App = ()=> {
     <Header />
     <Routes>
         <Route path='/' element={<RecipeHome />} />
-        <Route path='/recipeindex' element={<RecipeIndex />} />
+        <Route path='/recipeindex' element={<RecipeIndex recipes={recipes} />} />
         <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes}/>} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp />} />
