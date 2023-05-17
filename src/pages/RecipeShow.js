@@ -3,6 +3,7 @@ import React from "react"
 
 
 
+
 const RecipeShow = ({ recipes }) => {
     return (
         <div className="recipe-show">
@@ -24,6 +25,12 @@ const RecipeShow = ({ recipes }) => {
             <div className="instructions-section">
                 <h3> Instructions</h3>
                 <p> Intruction section </p>
+            </div>
+            <div classNmae="show-buttons">
+            <button type="button">Click Me!</button>
+            <button type="button2">Click Me!</button>
+                
+            
             </div>
 
         </div>
