@@ -1,13 +1,33 @@
 import React from "react"
 
 
-const RecipeShow = () => {
+
+
+const RecipeShow = ({ recipes }) => {
     return (
-        <>
-        <h2>Welcome</h2>
-        
-        </>
-)
+        <div className="recipe-show">
+            <div className="picture-section">
+                {/* {picture goes here} */}
+                {/* <img src= alt= /> */}
+            </div>
+            <div className="details-section">
+                <h2>Recipe title </h2>
+            </div>
+            <div className="time-section">
+                <p>Prep time: prep time</p>
+                <p>Cook time: cook time</p>
+            </div>
+            <div className="ingredients-section">
+                <h3>Ingredients</h3>
+                <ul>ingredients list </ul>
+            </div>
+            <div className="instructions-section">
+                <h3> Instructions</h3>
+                <p> Intruction section </p>
+            </div>
+
+        </div>
+    )
 
 }
 
