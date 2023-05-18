@@ -1,63 +1,115 @@
-import React from "react"
+import React, { useEffect } from "react"
 import eddie from "../assests/eddie.png"
 import sam from "../assests/sam.png"
 import spencer from "../assests/spencer.png"
+import wags from "../assests/wags.png"
 
 const AboutUs = () => {
+  useEffect(() => {
+    const reveal = () => {
+      let reveals = document.querySelectorAll('.reveal')
+      for(let i = 0; i < reveals.length; i++){
+        let windowheight = window.innerHeight
+        let revealtop = reveals[i].getBoundingClientRect().top
+        let revealpoint = 150
+        if(revealpoint < windowheight - revealtop){
+          reveals[i].classList.add('active')
+        }
+        else{
+          reveals[i].classList.remove('active')
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal)
+
+    return () => {
+      window.removeEventListener("scroll", reveal)
+    }
+  }, [])
   return (
-    <>
-      <h1 id="about-us-header">Meet the team</h1>
-      <div className="picture-boxes">
-        <h3>Tech Lead</h3>
-        <img src={sam} alt="Sam" />
-        <p id="sam-intro">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Click{" "}
-          <a>here</a> to see my GitHub!
-        </p>
-      </div>
-      <div className="picture-boxes" id="align-left">
-        <h3>Project Manager</h3>
-        <img src={eddie} alt="eddie" />
-        <p id="eddie-intro">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
-        </p>
-      </div>
-      <div className="picture-boxes">
-        <h3>UX/UI Lead</h3>
-        <img src={spencer} alt="spencer" />
-        <p id="sam-intro">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Click{" "}
-          <a
-            href="https://github.com/Spencerj1297"
+    <>  
+      <section>
+        <h1>Meet the YUM Team.</h1>
+      </section>
+      <section>
+        <div className="container reveal">
+          <h2>Sam Saenz</h2>
+          <div className="cards">
+            <div className="text-card">
+              <h3></h3>
+              <a href= "https://www.linkedin.com/in/samuelsaenz/"
             target="_blank"
             rel="noopener noreferrer"
-            className="intext-link"
-          >
-            here
-          </a>{" "}
-          to see my GitHub!
-        </p>
-      </div>
+            className="intext-link">
+              <img src={sam} alt="sam"/>
+              </a>
+            </div>
+            <div className="text-card">
+              <h3>Tech Lead</h3>
+              <p>Hi, Thank you for checking out our webpage and we hope you enjoyed YUM! During the course of development for YUM I was the lead for Tech and version control. The day-to-day in this role consited of coding guidance and ensuring approraite merging to our GitHub Repo. If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page! </p>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container reveal">
+          <h2>Eddie Carrion</h2>
+          <div className="cards">
+            <div className="text-card">
+              <h3></h3>
+              <a href="https://www.linkedin.com/in/eduviges-carrion/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="intext-link">
+              <img src={eddie} alt="eddie"/>
+              </a>
+            </div>
+            <div className="text-card">
+              <h3>Project Manager</h3>
+              <p>Hello, Thank you for checking out our webpage and we hope you enjoyed YUM! During the course of development for YUM I was the lead for communication and trello management. The day-to-day in this role consited of keeping a continuos workflow for the team that lead us accomplishing trello task. If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page!</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container reveal">
+          <h2>Wagner Gonzalez</h2>
+          <div className="cards">
+            <div className="text-card">
+              <h3></h3>
+              <img src={wags} alt="wagner"/>
+            </div>
+            <div className="text-card">
+              <h3>Product Manager</h3>
+              <p>Lorem ipsum dolor sit amet, consectttur</p>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container reveal">
+          <h2>Spencer Johnson</h2>
+          <div className="cards">
+            <div className="text-card">
+              <h3></h3>
+              <a  href="https://github.com/Spencerj1297"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="intext-link" >
+              <img src={spencer} alt="spencer"/>
+              </a>
+            </div>
+            <div className="text-card">
+              <h3>UI /UX</h3>
+              <p> Hi, Im spencer, thank you for taking the time to check out our creation! As the Lead UI /UX programmer I hope you enjoyed the look and design of YUM. My goal was to include a color scheme and features that would enhance interaction with our awesome platfrom. If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page!If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page!</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
-
 export default AboutUs
