@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
-import LogIn from "../pages/LogIn"
+import Login from "../components/Login"
 
-describe("<LogIn/>", () => {
+describe("<Login/>", () => {
   it("renders information without error", () => {
-    render(<LogIn />)
+    render(<Login />)
     const element = screen.getByText(/Login here/i)
     expect(element).toBeInTheDocument()
   })

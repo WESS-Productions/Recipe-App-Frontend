@@ -6,13 +6,13 @@ import RecipeHome from './pages/RecipeHome'
 import RecipeShow from './pages/RecipeShow'
 import RecipeIndex from './pages/RecipeIndex'
 import ProtectedMyRecipes from './pages/ProtectedMyRecipes'
-import LogIn from './pages/LogIn'
+import Login from './components/Login'
 import SignUp from './pages/SignUp'
 import AboutUs from './pages/AboutUs'
 import Navigation from './pages/Navigation'
 import NotFound from './pages/NotFound'
-import Header from './componets/Header'
-import Footer from './componets/Footer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import mockUsers from './mockUsers';
 import mockRecipes from './mockRecipes';
 import { useState } from 'react';
@@ -31,7 +31,7 @@ const App = ()=> {
         <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes}/>} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<LogIn />} />
+        <Route path='/login' element={<Login />} />
         {/* <Route path='/recipeedit' element={<RecipeEdit />} /> */}
         <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser}/>} />
         <Route path='/notfound' element={<NotFound />} />
