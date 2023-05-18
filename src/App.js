@@ -2,6 +2,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import RecipeHome from './pages/RecipeHome'
+import RecipeNew from './pages/RecipeNew';
 import RecipeEdit from './pages/RecipeEdit'
 import RecipeShow from './pages/RecipeShow'
 import RecipeIndex from './pages/RecipeIndex'
@@ -14,7 +15,6 @@ import NotFound from './pages/NotFound'
 import Header from './componets/Header'
 import Footer from './componets/Footer'
 import mockUsers from './mockUsers';
-import mockRecipes from './mockRecipes';
 import { useState, useEffect } from 'react';
 import { Spinner } from 'reactstrap'
 
@@ -43,6 +43,19 @@ const App = ()=> {
       .catch((error) => console.log("Recipe read errors ", error))
   }
 
+  const createRecipe = (recipe) => {
+    fetch("http://localhost:3000/recipes", {
+      body: JSON.stringify(recipe),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readRecipe())
+      .catch((errors) => console.log("Recipe create errors:", errors))
+  }
+
   if (loading || recipes.length === 0) {
     return (
       <Spinner>
@@ -57,6 +70,7 @@ const App = ()=> {
         <Route path='/' element={<RecipeHome />} />
         <Route path='/recipeindex' element={<RecipeIndex recipes={recipes} />} />
         <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes}/>} />
+        <Route path='/recipenew' element={<RecipeNew createRecipe={createRecipe} currentUser={currentUser}/>}/>
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
