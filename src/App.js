@@ -15,17 +15,41 @@ import Header from './componets/Header'
 import Footer from './componets/Footer'
 import mockUsers from './mockUsers';
 import mockRecipes from './mockRecipes';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Spinner } from 'reactstrap'
 
 const App = ()=> {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
-  const [recipes, setRecipes] = useState(mockRecipes)
+  const [recipes, setRecipes] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    readRecipe()
+  }, [])
 
   const updateRecipe = (recipe, id) => {
     console.log(recipe);
     console.log(id);
 	}
 
+  const readRecipe = () => {
+    fetch('http://localhost:3000/recipes')
+      .then((response) => response.json())
+      .then((payload) => {
+        setRecipes(payload)
+        setLoading(false)
+      })
+      .catch((error) => console.log("Recipe read errors ", error))
+  }
+
+  if (loading || recipes.length === 0) {
+    return (
+      <Spinner>
+        Loading...
+      </Spinner>
+    )
+  }
   return(
     <>
     <Header />
