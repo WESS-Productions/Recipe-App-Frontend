@@ -1,3 +1,31 @@
+/* Start of the styling for the header */
+.header{
+  background-color: #eeeeee;
+  align-items: right;
+  text-align: right;
+}
+.nav-link{
+color:rgba(18, 17, 17, 0.811);
+text-decoration: none;
+
+}
+.nav-link-styles{
+  text-decoration: none;
+  color:#b06f6f;
+  font-size: larger;
+  font-family:"Cormorant", serif;
+}
+.nav-bar-logo{
+  height: 3rem;
+  width: 8rem;
+  border:none;
+  box-shadow: none;
+
+}
+
+
+/* Start of the styling for the body section */
+
 body {
   background-color: #eeeeee;
 }
