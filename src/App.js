@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import RecipeHome from './pages/RecipeHome'
@@ -28,11 +27,6 @@ const App = ()=> {
     readRecipe()
   }, [])
 
-  const updateRecipe = (recipe, id) => {
-    console.log(recipe);
-    console.log(id);
-	}
-
   const readRecipe = () => {
     fetch('http://localhost:3000/recipes')
       .then((response) => response.json())
@@ -54,6 +48,19 @@ const App = ()=> {
       .then((response) => response.json())
       .then((payload) => readRecipe())
       .catch((errors) => console.log("Recipe create errors:", errors))
+  }
+
+  const updateRecipe = (recipe, id) => {
+    fetch(`http://localhost:3000/recipes/${id}`, {
+      body: JSON.stringify(recipe),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
+      .then((payload) => readRecipe())
+      .catch((errors) => console.log("Recipe update errors:", errors))
   }
 
   if (loading || recipes.length === 0) {
@@ -86,3 +93,4 @@ const App = ()=> {
   )
 }
 export default App;
+
