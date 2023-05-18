@@ -8,46 +8,87 @@ img {
 
 /* Start of the styling for About Us page */
 
-.picture-boxes {
-  height: 18rem;
-
-  margin-left: 10rem;
-  margin-bottom: 7rem;
-  margin-top: 7rem;
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#align-left {
-  align-items: right;
-  text-align: right;
-  margin-right: 10rem;
+section:nth-child(2){
+  background-color:rgba(18, 17, 17, 0.811);
+  color: rgba(221, 221, 2, 0.877);
+}
+section:nth-child(3){
+  background-color:rgb(122, 148, 122);
 }
 
-#about-us-header {
+section:nth-child(4){
+  background-color:rgba(164, 152, 168, 0.932);
+}
+section:nth-child(5){
+  background-color:#9e6262;
+}
+section:nth-child(6){
+  background-color:rgba(57, 57, 57, 0.811);
+}
+
+section .container{
+  margin: 100px
+}
+
+section h1{
+  font-size: 80px;
+  font-family:"Cormorant", serif; 
+}
+section h2{
+  font-size: 65px;
   text-align: center;
-  color: #b06f6f;
-  font-size: 5rem;
+  font-family:"Cormorant", serif; 
+  color: black;
+  text-transform: uppercase;
 }
 
-#sam-intro {
-  width: 60rem;
-  margin-top: -12rem;
-  margin-left: 15rem;
-  font-size: larger;
-  line-height: 2rem;
+section .cards{
+  display: flex;
 }
 
-#eddie-intro {
-  width: 60rem;
-  margin-top: -12rem;
-  margin-left: -5rem;
-  font-size: larger;
-  line-height: 2rem;
-  text-align: left;
+section .cards .text-card{
+  background: #b06f6f00;
+  font-family:"Cormorant", serif; 
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  margin-left: 14rem;
+  
+
+}
+section .cards .text-card h3{
+  font-size: 30px ;
+  text-align: center ;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.intext-link {
-  text-decoration: none;
-  color: #b06f6f;
+@media (max-width: 900px){
+    section h1{
+      font-size: 40px;
+    }
+    section .cards{
+      flex-direction: column;
+    }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /* Start of the styling for Footer*/
