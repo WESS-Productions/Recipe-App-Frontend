@@ -2,14 +2,14 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import RecipeHome from './pages/RecipeHome'
-// import RecipeEdit from './pages.RecipeEdit'
+import RecipeEdit from './pages/RecipeEdit'
 import RecipeShow from './pages/RecipeShow'
 import RecipeIndex from './pages/RecipeIndex'
 import ProtectedMyRecipes from './pages/ProtectedMyRecipes'
-import LogIn from './pages/LogIn'
-import SignUp from './pages/SignUp'
+import LogIn from './componets/LogIn'
+import SignUp from './componets/SignUp'
 import AboutUs from './pages/AboutUs'
-import Navigation from './pages/Navigation'
+import Navigation from './componets/Navigation'
 import NotFound from './pages/NotFound'
 import Header from './componets/Header'
 import Footer from './componets/Footer'
@@ -21,6 +21,10 @@ const App = ()=> {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
   const [recipes, setRecipes] = useState(mockRecipes)
 
+  const updateRecipe = (recipe, id) => {
+    console.log(recipe);
+    console.log(id);
+	}
 
   return(
     <>
@@ -32,7 +36,7 @@ const App = ()=> {
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
-        {/* <Route path='/recipeedit' element={<RecipeEdit />} /> */}
+        <Route path='/recipeedit/:id' element={<RecipeEdit recipes={recipes} currentUser={currentUser} updateRecipe={updateRecipe}/>} />
         <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser}/>} />
         <Route path='/notfound' element={<NotFound />} />
         <Route path='/navigation' element={<Navigation />} />
