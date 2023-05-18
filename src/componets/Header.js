@@ -1,13 +1,11 @@
-import React from "react"
+import Navigation from "./Navigation"
 
-
-const Header = () => {
-    return (
-        <>
-        <header>Yum</header>
-        </>
+const Header = ({ current_user }) => {
+    return(
+        <header className="header">
+            <Navigation current_user={current_user} />
+        </header>
     )
-
 }
 
 export default Header
