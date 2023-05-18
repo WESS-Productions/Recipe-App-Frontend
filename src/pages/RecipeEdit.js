@@ -7,7 +7,6 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
   const navigate = useNavigate()
 
   let currentRecipe = recipes?.find((recipe) => recipe.id === +id)
-  console.log(currentRecipe)
 
   const [editRecipe, setEditRecipe] = useState({
     user_id: currentUser.id,
@@ -83,7 +82,7 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
           <Label for="recipe-prep-time">Prep Time</Label>
           <Input
           id="recipe-prep-time"
-          name="prep-time"
+          name="prep_time"
           placeholder="Enter Prep Time"
           type="text"
           onChange={handleChange}
@@ -95,7 +94,7 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
           <Label for="recipe-cook-time">Cook Time</Label>
           <Input
           id="recipe-cook-time"
-          name="cook-time"
+          name="cook_time"
           placeholder="Enter Cook Time"
           type="text"
           onChange={handleChange}
