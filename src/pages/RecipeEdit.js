@@ -8,15 +8,16 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
 
   let currentRecipe = recipes?.find((recipe) => recipe.id === +id)
 
+  
   const [editRecipe, setEditRecipe] = useState({
-    user_id: currentUser.id,
-    title: currentRecipe.title,
-    ingredients: currentRecipe.ingredients,
-    instructions: currentRecipe.instructions,
-    vegetarian: currentRecipe.vegetarian,
-    prep_time: currentRecipe.prep_time,
-    cook_time: currentRecipe.cook_time,
-    image: currentRecipe.image
+    user_id: currentUser?.id,
+    title: currentRecipe?.title,
+    ingredients: currentRecipe?.ingredients,
+    instructions: currentRecipe?.instructions,
+    vegetarian: currentRecipe?.vegetarian,
+    prep_time: currentRecipe?.prep_time,
+    cook_time: currentRecipe?.cook_time,
+    image: currentRecipe?.image
     
   })
   const handleChange = (e) => {
@@ -28,6 +29,8 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
   }
   return(
     <div>
+      {currentRecipe && (
+        <>
       <Form 
       className="edit-recipe-form">
         <FormGroup>
@@ -117,6 +120,8 @@ const RecipeEdit = ({ recipes, currentUser, updateRecipe }) => {
         <Button className="submit-button" onClick={handleSubmit}>Submit Updated Recipe</Button>
       </Form>
       <br/>
+      </>
+      )}
     </div>
 
   )

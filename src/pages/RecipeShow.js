@@ -7,18 +7,21 @@ const RecipeShow = ({ recipes }) => {
   const currentRecipe = recipes?.find((recipe) => recipe.id === +id)
 
   return (
+
     <>
+      
       <style>
         {`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat:wght@300&family=Mulish:wght@600;800&family=Roboto:wght@700&display=swap');
         #backgroundDiv {
-          background-image: url('${currentRecipe.image}');
+          background-image: url('${currentRecipe?.image}');
           background-size: cover;
           background-position: center center;
         }
         `}
       </style>
-
+      <div>
+        {currentRecipe && (<>
       <div className="details-section">
         <h2>{currentRecipe.title}</h2>
       </div>
@@ -44,13 +47,8 @@ const RecipeShow = ({ recipes }) => {
         </h3>
         <p>{currentRecipe.instructions}</p>
       </div>
-      <div className="show-buttons">
-        <button type="button" className="button">
-          Change Recipe
-        </button>
-        <button type="button" className="button">
-          Delete Recipe
-        </button>
+      </>
+)}
       </div>
     </>
   )
