@@ -34,8 +34,9 @@ const items = [
     // key: 3,
   },
 ]
-const RecipeHome = () => {
-  console.log(items)
+const RecipeHome = ({login, recipes, currentUser}) => {
+  console.log("USER IS: ", currentUser)
+  // console.log(items)
   const [activeIndex, setActiveIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
   const next = () => {
@@ -88,7 +89,7 @@ const RecipeHome = () => {
 
   return (
     <>
-      <Login />
+      <Login login={login}/>
       <Carousel
         activeIndex={activeIndex}
         next={next}

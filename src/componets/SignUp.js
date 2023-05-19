@@ -1,12 +1,35 @@
 import React from "react";
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = ({ signup }) => {
+
+  const formRef = useRef()
+
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    //stop the default behavior of the form.  We want to send it with fetch.
+    e.preventDefault()
+    // store the form entries in a variable
+    const formData = new FormData(formRef.current)
+    // create and object from the entries
+    const data = Object.fromEntries(formData)
+    // store user's info in format that can be used with jwt.
+    const userInfo = {
+      "user": { email: data.email, password: data.password }
+    }
+    signup(userInfo)
+    navigate("/")
+    e.target.reset()  // resets the input field
+  }
+
   return (
     <Container>
       <Row className="justify-content-center">
         <Col sm="6">
-          <Form>
+          <Form innerRef={formRef} onSubmit={handleSubmit}>
             <h2 className="text-center mb-4">Sign Up</h2>
             <FormGroup>
               <Label for="fullName">Full Name</Label>
