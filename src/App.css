@@ -1,3 +1,31 @@
+/* Start of the styling for the header */
+.header{
+  background-color: #eeeeee;
+  align-items: right;
+  text-align: right;
+}
+.nav-link{
+color:rgba(18, 17, 17, 0.811);
+text-decoration: none;
+
+}
+.nav-link-styles{
+  text-decoration: none;
+  color:#b06f6f;
+  font-size: larger;
+  font-family:"Cormorant", serif;
+}
+.nav-bar-logo{
+  height: 3rem;
+  width: 8rem;
+  border:none;
+  box-shadow: none;
+
+}
+
+
+/* Start of the styling for the body section */
+
 body {
   background-color: #eeeeee;
 }
@@ -104,7 +132,6 @@ section .cards .text-card h3{
   height: 55rem;
 }
 .picture-section {
-  /* border: 10px solid #BFBFBF; */
   height: 40rem;
   width: 40rem;
   margin: 0 auto;
@@ -127,7 +154,6 @@ section .cards .text-card h3{
 
 .time-section {
   text-align: center;
-  /* border: 5px solid #BFBFBF; */
   width: 15rem;
   height: 8rem;
   font-family: "Cormorant", serif;
@@ -172,7 +198,6 @@ section .cards .text-card h3{
   text-align: left;
   padding-left: 2rem;
   font-family: "Cormorant", serif;
-  /* border: 1px solid #BFBFBF; */
   width: 25rem;
   height: 40rem;
   margin: 0 auto;
