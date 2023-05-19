@@ -1,69 +1,43 @@
 import {
-    Form,
-    Row,
-    Col,
-    Label,
-    Input,
-    FormGroup,
-    Button,
-  } from 'reactstrap';
-const Login = () => {
-    const handleSubmit = () => {
-      console.log('something')
+  Form,
+  Row,
+  Col,
+  Label,
+  Input,
+  FormGroup,
+  Button,
+} from 'reactstrap';
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+
+const Login = ({ login, deleteRecipe}) => {
+
+  const navigate = useNavigate()
+  const formRef = useRef()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(formRef.current)
+    const data = Object.fromEntries(formData)
+    const userInfo = {
+      "user": { email: data.email, password: data.password }
     }
-      return (
-    <Form onSubmit={handleSubmit}>
-    <Row className="row-cols-lg-auto g-3 align-items-center">
-      <Col>
-        <Label
-          className="visually-hidden"
-          for="exampleEmail"
-        >
-          Email
-        </Label>
-        <Input
-          id="exampleEmail"
-          name="email"
-          placeholder="Enter Your Email"
-          type="email"
-        />
-      </Col>
-      <Col>
-        <Label
-          className="visually-hidden"
-          for="examplePassword"
-        >
-          Password
-        </Label>
-        <Input
-          id="examplePassword"
-          name="password"
-          placeholder="Enter Your Password"
-          type="password"
-        />
-      </Col>
-      <Col>
-        <FormGroup check>
-          <Input
-            id="exampleCheckbox"
-            name="checkbox"
-            type="checkbox"
-          />
-          <Label
-            check
-            for="exampleCheckbox"
-          >
-            Remember Me
-          </Label>
-        </FormGroup>
-      </Col>
-      <Col>
-        <Button>
-          Log in Here
-        </Button>
-      </Col>
-    </Row>
-    </Form>
-      )
-    }
+    login(userInfo)
+    navigate("/")
+    e.target.reset()
+  }
+
+  return(
+    <div>
+     <form ref={formRef} onSubmit={handleSubmit}>
+        Email: <input type="email" name='email' placeholder="email" />
+        <br/>
+        Password: <input type="password" name='password' placeholder="password" />
+        <br/>
+        <input type='submit' value="Submit" />
+    </form>
+    <br />
+    </div>
+  )
+}
 export default Login

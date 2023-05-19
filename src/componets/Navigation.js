@@ -11,7 +11,8 @@ import { Link, NavLink, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import YUM from "../assests/YUM.png"
 
-const Navigation = ({ current_user }) => {
+const Navigation = ({ current_user, logout }) => {
+  console.log("NAV_USER_IS: ", current_user);
   const [currentUser, setCurrentUser] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
   const url = "http://localhost:3001"
@@ -22,20 +23,6 @@ const Navigation = ({ current_user }) => {
     setIsOpen(!isOpen)
   }
 
-  const logout = () => {
-    fetch(`${url}/logout`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
-      },
-      method: "DELETE",
-    })
-      .then((payload) => {
-        localStorage.removeItem("token")
-        setCurrentUser(null)
-      })
-      .catch((error) => console.log("log out errors: ", error))
-  }
 
   const handleClick = () => {
     logout()

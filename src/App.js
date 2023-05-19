@@ -17,13 +17,12 @@ import mockUsers from './mockUsers';
 import { useState, useEffect } from 'react';
 import { Spinner } from 'reactstrap'
 
-const App = ()=> {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0])
+const App = () => {
+  const [currentUser, setCurrentUser] = useState(null)
   const [recipes, setRecipes] = useState([])
-  const [loading, setLoading] = useState(false)
+  const url = "http://localhost:3000/"
 
   useEffect(() => {
-    setLoading(true)
     readRecipe()
   }, [])
 
@@ -32,7 +31,6 @@ const App = ()=> {
       .then((response) => response.json())
       .then((payload) => {
         setRecipes(payload)
-        setLoading(false)
       })
       .catch((error) => console.log("Recipe read errors ", error))
   }
@@ -75,25 +73,87 @@ const App = ()=> {
       .catch((errors) => console.log("delete errors:", errors))
   }
 
-  return(
+  // authentication methods
+  const login = (userInfo) => {
+    fetch(`${url}/login`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
+      },
+      method: 'POST'
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Invalid username or password") // Throw an error for failed authentication
+        }
+        // store the token
+        localStorage.setItem("token", response.headers.get("Authorization"))
+        return response.json()
+      })
+      .then(payload => {
+        setCurrentUser(payload)
+      })
+      .catch(error => console.log("login errors: ", error))
+  }
+
+  const signup = (userInfo) => {
+    fetch(`${url}/signup`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
+      },
+      method: 'POST'
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Invalid username or password") // Throw an error for failed authentication
+        }
+        // store the token
+        localStorage.setItem("token", response.headers.get("Authorization"))
+        return response.json()
+      })
+      .then(payload => {
+        setCurrentUser(payload)
+      })
+      .catch(error => console.log("login errors: ", error))
+  }
+
+  const logout = () => {
+    fetch(`${url}/logout`, {
+      headers: {
+        "Content-Type": 'application/json',
+        "Authorization": localStorage.getItem("token") //retrieve the token 
+      },
+      method: 'DELETE'
+    })
+      .then(payload => {
+        localStorage.removeItem("token")  // remove the token
+        setCurrentUser(null)
+      })
+      .catch(error => console.log("log out errors: ", error))
+  }
+
+  return (
     <>
-    <Header />
-    <Routes>
-        <Route path='/' element={<RecipeHome />} />
+      <Header current_user={currentUser} logout={logout}/>
+      <Routes>
+        <Route path='/' element={<RecipeHome login={login} recipes={recipes} currentUser={currentUser}/>} />
         <Route path='/recipeindex' element={<RecipeIndex recipes={recipes} />} />
-        <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes}/>} />
-        <Route path='/recipenew' element={<RecipeNew createRecipe={createRecipe} currentUser={currentUser}/>}/>
+        <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes} />} />
+        <Route path='/recipenew' element={<RecipeNew createRecipe={createRecipe} currentUser={currentUser} />} />
         <Route path='/aboutus' element={<AboutUs />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<LogIn />} />
-        <Route path='/recipeedit/:id' element={<RecipeEdit recipes={recipes} currentUser={currentUser} updateRecipe={updateRecipe}/>} />
-        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser} deleteRecipe={deleteRecipe}/>} />
+        <Route path='/signup' element={<SignUp signup={signup}/>} />
+        <Route path='/login' element={<LogIn login={login} deleteRecipe={deleteRecipe} />} />
+        <Route path='/recipeedit/:id' element={<RecipeEdit recipes={recipes} currentUser={currentUser} updateRecipe={updateRecipe} />} />
+        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser} deleteRecipe={deleteRecipe} />} />
         <Route path='/notfound' element={<NotFound />} />
-        <Route path='/navigation' element={<Navigation />} />
-        <Route path='/header' element={<Header />} />
-        
-    </Routes>
-    <Footer />
+        <Route path='/navigation' element={<Navigation current_user={currentUser}/>} />
+        <Route path='/header' element={<Header current_user={currentUser}/>} />
+
+      </Routes>
+      <Footer />
     </>
   )
 }
