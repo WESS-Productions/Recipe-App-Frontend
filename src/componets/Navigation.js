@@ -14,12 +14,12 @@ const Navigation = ({ current_user }) => {
     fetch(`${url}/logout`, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"), //retrieve the token
+        Authorization: localStorage.getItem("token"),
       },
       method: "DELETE",
     })
       .then((payload) => {
-        localStorage.removeItem("token") // remove the token
+        localStorage.removeItem("token") 
         setCurrentUser(null)
       })
       .catch((error) => console.log("log out errors: ", error))
@@ -91,6 +91,3 @@ export default Navigation
 
 
 
-{/* <NavbarBrand tag={Link} to="/">
-        <img src={catLogo} alt="Cat outline" className="header-cat-logo" />
-      </NavbarBrand> */}
