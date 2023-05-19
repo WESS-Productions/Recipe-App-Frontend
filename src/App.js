@@ -63,13 +63,18 @@ const App = ()=> {
       .catch((errors) => console.log("Recipe update errors:", errors))
   }
 
-  if (loading || recipes.length === 0) {
-    return (
-      <Spinner>
-        Loading...
-      </Spinner>
-    )
+  const deleteRecipe = (id) => {
+    fetch(`http://localhost:3000/recipes/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then((response) => response.json())
+      .then((payload) => readRecipe())
+      .catch((errors) => console.log("delete errors:", errors))
   }
+
   return(
     <>
     <Header />
@@ -82,7 +87,7 @@ const App = ()=> {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/recipeedit/:id' element={<RecipeEdit recipes={recipes} currentUser={currentUser} updateRecipe={updateRecipe}/>} />
-        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser}/>} />
+        <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser} deleteRecipe={deleteRecipe}/>} />
         <Route path='/notfound' element={<NotFound />} />
         <Route path='/navigation' element={<Navigation />} />
         <Route path='/header' element={<Header />} />
