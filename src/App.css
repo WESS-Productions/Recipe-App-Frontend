@@ -4,10 +4,12 @@
   align-items: right;
   text-align: right;
 }
-.nav-link{
-color:rgba(18, 17, 17, 0.811);
-text-decoration: none;
+.navbar-nav{
+  margin-left: auto;
+}
 
+.nav-item-spacing {
+  margin-right: 15px;
 }
 .nav-link-styles{
   text-decoration: none;
@@ -16,11 +18,16 @@ text-decoration: none;
   font-family:"Cormorant", serif;
 }
 .nav-bar-logo{
-  height: 3rem;
-  width: 8rem;
+  height: 1.75rem;
+  width: 5rem;
   border:none;
   box-shadow: none;
+  margin-right: auto;
+}
 
+.links-container {
+  display: flex;
+  align-items: center;
 }
 
 
