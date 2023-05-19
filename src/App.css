@@ -230,3 +230,60 @@ section .cards .text-card h3{
   font-size: 30px;
   margin-top: none;
 }
+
+/* Start of the styling for the home page */
+.img-carousel{
+  height: 45rem;
+  width: 100%;
+  
+}
+
+.carousel-caption{
+  color:red
+}
+
+.carousel{
+  background-color: #9e6262;
+  width: 35rem;
+  margin: 1rem 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+
+.carousel-control-next-icon{
+  color: red;
+}
+
+.index-section-styles{
+  background-color: #b06f6f;
+  border:none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rem;
+
+}
+
+.card-container{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home-title{
+  margin-top: 20rem;
+  color: #c99d78;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  font-size: 5rem;
+  border-top: 80px solid #b06f6f;
+}
+
+.home-index-container{
+  background-color: #b06f6f;
+  height:60rem;
+}
