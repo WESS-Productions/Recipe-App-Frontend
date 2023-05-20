@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import eddie from "../assests/eddie.png"
+import Eddie from "../assests/Eddie.png"
 import sam from "../assests/sam.png"
 import spencer from "../assests/spencer.png"
 import wags from "../assests/wags.png"
@@ -62,12 +62,12 @@ const AboutUs = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="intext-link">
-              <img src={eddie} alt="eddie"/>
+              <img src={Eddie} alt="eddie" className="eddie"/>
               </a>
             </div>
             <div className="text-card">
               <h3>Project Manager</h3>
-              <p>Hello, Thank you for checking out our webpage and we hope you enjoyed YUM! During the course of development for YUM I was the lead for communication and trello management. The day-to-day in this role consited of keeping a continuos workflow for the team that lead us accomplishing trello task. If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page!</p>
+              <p>Thank you for checking out our webpage YUM! During the production phase I was the Project Manager. My responsibilities consisted of maintaining internal communication with my team members and maintaining our project management board. Yum was a fun application to create and I am grateful I was able to contribute alongside my team. Feel free to reach out to me via LinkedIn if you have any questions.</p>
             </div>
             
           </div>
