@@ -28,16 +28,26 @@ const Login = ({ login, deleteRecipe}) => {
   }
 
   return(
-    <div>
-     <form ref={formRef} onSubmit={handleSubmit}>
-        Email: <input type="email" name='email' placeholder="email" />
-        <br/>
-        Password: <input type="password" name='password' placeholder="password" />
-        <br/>
-        <input type='submit' value="Submit" />
-    </form>
-    <br />
-    </div>
+    <Form ref={formRef} onSubmit={handleSubmit} className='login-container'>
+      <br></br>
+      <br></br>
+      <br></br>
+
+            <FormGroup>
+              <Label for="email" className='login-inputs'>Email</Label>
+              <Input type="email" id="email" placeholder="Enter your email" />
+            </FormGroup>
+            <br></br>
+            
+            <div className='login-line'></div>
+            <br></br>
+            <FormGroup>
+              <Label for="password" className='login-inputs'>Password</Label>
+              <Input type="password" id="password" placeholder="Enter your password" />
+            </FormGroup>
+            <br></br>
+            <button className='button-login' block>login</button>
+          </Form>
   )
 }
 export default Login
