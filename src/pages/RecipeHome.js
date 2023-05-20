@@ -56,14 +56,16 @@ const RecipeHome = ({login, recipes, currentUser}) => {
     setActiveIndex(newIndex)
   }
 
-  const cards = items.map((recipe) => {
+  const cards = recipes.map((recipes) => {
     return(
       <Card
         style={{
-          width: "25rem",
+          width: "20rem",
+          height: "18rem"
+       
         }}
       >
-        <img alt="Sample" src="https://picsum.photos/300/200" />
+        <img alt="Sample" src={recipes.image} className="card-image"/>
       </Card>
    
     )
@@ -89,6 +91,7 @@ const RecipeHome = ({login, recipes, currentUser}) => {
 
   return (
     <>
+    <div className="home-page-top">
       <Login login={login}/>
       <Carousel
         activeIndex={activeIndex}
@@ -114,6 +117,7 @@ const RecipeHome = ({login, recipes, currentUser}) => {
           onClickHandler={next}
         />
       </Carousel>
+      </div>
       <div className="home-index-container">
       <div>
         <h1 className="home-title">Checkout some ideas</h1>

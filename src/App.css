@@ -1,26 +1,26 @@
 /* Start of the styling for the header */
-.header{
+.header {
   background-color: #eeeeee;
   align-items: right;
   text-align: right;
 }
-.navbar-nav{
+.navbar-nav {
   margin-left: auto;
 }
 
 .nav-item-spacing {
   margin-right: 15px;
 }
-.nav-link-styles{
+.nav-link-styles {
   text-decoration: none;
-  color:#b06f6f;
+  color: #b06f6f;
   font-size: larger;
-  font-family:"Cormorant", serif;
+  font-family: "Cormorant", serif;
 }
-.nav-bar-logo{
+.nav-bar-logo {
   height: 1.75rem;
   width: 5rem;
-  border:none;
+  border: none;
   box-shadow: none;
   margin-right: auto;
 }
@@ -29,7 +29,6 @@
   display: flex;
   align-items: center;
 }
-
 
 /* Start of the styling for the body section */
 
@@ -43,85 +42,83 @@ img {
 
 /* Start of the styling for About Us page */
 
-section{
+section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section:nth-child(2){
-  background-color:rgba(18, 17, 17, 0.811);
+section:nth-child(2) {
+  background-color: rgba(18, 17, 17, 0.811);
   color: rgba(221, 221, 2, 0.877);
 }
-section:nth-child(3){
-  background-color:rgb(122, 148, 122);
+section:nth-child(3) {
+  background-color: rgb(122, 148, 122);
 }
 
-section:nth-child(4){
-  background-color:rgba(164, 152, 168, 0.932);
+section:nth-child(4) {
+  background-color: rgba(164, 152, 168, 0.932);
 }
-section:nth-child(5){
-  background-color:#9e6262;
+section:nth-child(5) {
+  background-color: #9e6262;
 }
-section:nth-child(6){
-  background-color:rgba(57, 57, 57, 0.811);
-}
-
-section .container{
-  margin: 100px
+section:nth-child(6) {
+  background-color: rgba(57, 57, 57, 0.811);
 }
 
-section h1{
+section .container {
+  margin: 100px;
+}
+
+section h1 {
   font-size: 80px;
-  font-family:"Cormorant", serif; 
+  font-family: "Cormorant", serif;
 }
-section h2{
+section h2 {
   font-size: 65px;
   text-align: center;
-  font-family:"Cormorant", serif; 
+  font-family: "Cormorant", serif;
   color: black;
   text-transform: uppercase;
 }
 
-section .cards{
+section .cards {
   display: flex;
 }
 
-section .cards .text-card{
+section .cards .text-card {
   background: #b06f6f00;
-  font-family:"Cormorant", serif; 
+  font-family: "Cormorant", serif;
   font-size: 20px;
   margin: 20px;
   padding: 20px;
   margin-left: 14rem;
-  
-
 }
-section .cards .text-card h3{
-  font-size: 30px ;
-  text-align: center ;
+section .cards .text-card h3 {
+  font-size: 30px;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-@media (max-width: 900px){
-    section h1{
-      font-size: 40px;
-    }
-    section .cards{
-      flex-direction: column;
-    }
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 40px;
+  }
+  section .cards {
+    flex-direction: column;
+  }
 }
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: all 2s ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0px);
   opacity: 1;
 }
@@ -135,16 +132,15 @@ section .cards .text-card h3{
   line-height: 3.5rem;
 }
 
-
-.footer-logo{
+.footer-logo {
   box-shadow: none;
-  height:5rem;
+  height: 5rem;
   margin-right: 3rem;
 }
-.footer-link-styling{
+.footer-link-styling {
   text-decoration: none;
   margin-right: 3rem;
-  color:rgb(73, 73, 73)
+  color: rgb(73, 73, 73);
 }
 /* Start of the styling for Show page*/
 .picture-section-container {
@@ -244,49 +240,41 @@ section .cards .text-card h3{
 }
 
 /* Start of the styling for the home page */
-.img-carousel{
+.img-carousel {
   height: 45rem;
   width: 100%;
-  
 }
 
-.carousel-caption{
-  color:red
-}
-
-.carousel{
+.carousel {
   background-color: #9e6262;
-  width: 35rem;
-  margin: 1rem 5rem auto;
+  width: 40rem;
+  margin: 2rem 5rem auto;
+  margin-left: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  
+}
+.carousel-caption{
+  font-family:"Cormorant", serif; 
 }
 
-.carousel-control-next-icon{
-  color: red;
-}
-
-.index-section-styles{
+.index-section-styles {
   background-color: #b06f6f;
-  border:none;
+  border: none;
   align-items: center;
   justify-content: center;
   margin-top: 20rem;
-
 }
 
-.card-container{
-  width:100%;
+.card-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.home-title{
-  margin-top: 20rem;
+.home-title {
+  margin-top: 15rem;
   color: #c99d78;
   margin-bottom: 40px;
   text-align: center;
@@ -295,8 +283,65 @@ section .cards .text-card h3{
   border-top: 80px solid #b06f6f;
 }
 
-.home-index-container{
+.home-index-container {
   background-color: #b06f6f;
-  height:60rem;
+  height: 60rem;
 }
 
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Start of the styles for the login feature */
+
+.login-container {
+  display: inline-block;
+  height: 30rem;
+  width: 20rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 15rem;
+  margin-top: 5rem;
+  background-color: #eeeeee;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.home-page-top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.button-login{
+  height: 3rem;
+  width: 8rem;
+  font-size: 17px;
+  font-family: "Cormorant", serif;
+  font-weight: bolder;
+  background-color: #b06f6f;
+  color: #eeeeee;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 10px;
+ 
+}
+
+.button-login:hover {
+  cursor: pointer;
+  background-color: #b06f6fbc;
+  transition: 0.25s ease;
+}
+
+.login-line{
+  border: 1px solid #bfbfbf;
+}
+
+.login-inputs{
+  font-family: "Cormorant", serif;
+  font-size: 1.25rem;
+}
