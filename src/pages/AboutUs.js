@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Eddie from "../assests/eddie.png"
+import Eddie from "../assests/Eddie.png"
 import sam from "../assests/sam.png"
 import spencer from "../assests/spencer.png"
 import wags from "../assests/wags.png"
