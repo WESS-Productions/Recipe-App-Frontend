@@ -345,3 +345,58 @@ section .cards .text-card h3 {
   font-family: "Cormorant", serif;
   font-size: 1.25rem;
 }
+
+/* Start of the index page styles */
+.recipe-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10rem;
+  padding-left: 7rem;
+}
+
+.recipe-card{
+  width: 300px;
+  height: 350px;
+  margin-right: 10rem;
+  margin-top: 10rem;
+  text-align: center;
+  background-color: rgb(255, 255, 202);
+  border-top: 3px solid rgb(255, 255, 202);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.recipe-card:hover{
+  transform: scale(1.1) ;
+}
+
+
+.recipe-title{
+font-family:  "Cormorant", serif;
+color: rgb(119, 119, 119);
+font-size: 25px;
+}
+
+.link-button-container{
+  display: flex;
+  justify-content: center;
+  background-color:rgb(255, 255, 202);
+  margin-top: 5px;
+  border-bottom: 4px solid rgb(255, 255, 202);
+  border-top: 4px solid rgb(255, 255, 202);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header-index{
+  color: #b06f6f;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 7rem;
+  font-family:  "Cormorant", serif;
+}
+
+.Yum-index{
+  color: #E8D000;
+}
