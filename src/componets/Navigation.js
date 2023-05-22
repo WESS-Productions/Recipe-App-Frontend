@@ -12,7 +12,6 @@ import { useState } from "react"
 import YUM from "../assests/YUM.png"
 
 const Navigation = ({ current_user, logout }) => {
-  console.log("NAV_USER_IS: ", current_user);
   const [currentUser, setCurrentUser] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
   const url = "http://localhost:3001"
@@ -26,8 +25,8 @@ const Navigation = ({ current_user, logout }) => {
 
   const handleClick = () => {
     logout()
-    navigate("/")
   }
+
   return (
     <Navbar light expand="md">
       <NavbarBrand tag={Link} to="/" className="mr-auto">
