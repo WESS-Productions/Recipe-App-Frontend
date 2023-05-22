@@ -20,7 +20,7 @@ import { Spinner } from 'reactstrap'
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [recipes, setRecipes] = useState([])
-  const url = "http://localhost:3000/"
+  const url = "http://localhost:3000"
 
   useEffect(() => {
     readRecipe()
@@ -115,7 +115,9 @@ const App = () => {
         return response.json()
       })
       .then(payload => {
-        setCurrentUser(payload)
+        if(payload.id !== null){
+          setCurrentUser(payload)
+        }
       })
       .catch(error => console.log("login errors: ", error))
   }

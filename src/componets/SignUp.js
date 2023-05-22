@@ -17,41 +17,38 @@ const SignUp = ({ signup }) => {
     // create and object from the entries
     const data = Object.fromEntries(formData)
     // store user's info in format that can be used with jwt.
-    const userInfo = {
-      "user": { email: data.email, password: data.password }
+    if(data.password === data.confirm_password) {
+      const userInfo = {
+        "user": { email: data.email, password: data.password }
+      }
+      signup(userInfo)
+      navigate("/")
     }
-    signup(userInfo)
-    navigate("/")
     e.target.reset()  // resets the input field
   }
 
   return (
-    <Container>
-      <Row className="justify-content-center">
-        <Col sm="6">
-          <Form innerRef={formRef} onSubmit={handleSubmit}>
-            <h2 className="text-center mb-4">Sign Up</h2>
-            <FormGroup>
-              <Label for="fullName">Full Name</Label>
-              <Input type="text" id="fullName" placeholder="Enter your full name" />
-            </FormGroup>
-            <FormGroup>
-              <Label for="email">Email</Label>
-              <Input type="email" id="email" placeholder="Enter your email" />
-            </FormGroup>
-            <FormGroup>
-              <Label for="password">Password</Label>
-              <Input type="password" id="password" placeholder="Enter your password" />
-            </FormGroup>
-            <FormGroup>
-              <Label for="confirmPassword">Confirm Password</Label>
-              <Input type="password" id="confirmPassword" placeholder="Confirm your password" />
-            </FormGroup>
-            <Button color="primary" block>Sign Up</Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <div className="sign-up">
+        <form ref={formRef} onSubmit={handleSubmit} className="form">
+          <div className="form-row">
+          <label>Email:</label> <input type="email" name='email' placeholder="email" />
+          </div>
+          <br />
+          <div className="form-row">
+          <label>Password:</label> <input type="password" name='password' placeholder="password" />
+          </div>
+          <br />
+          <div className="form-row">
+          <label>Confirm Password:</label> <input type="password" name='confirm_password' placeholder="password" />
+          </div>
+          <br />
+          <input className="submit-button" type='submit' value="Login" />
+        </form>
+        <br />
+        <div className="sign-up-words">Already registered? <a href="/signup">Login Now!</a> </div>
+      </div>
+    </>
   );
 }
 
