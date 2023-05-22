@@ -20,14 +20,14 @@ import { Spinner } from 'reactstrap'
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [recipes, setRecipes] = useState([])
-  const url = "http://localhost:3000"
+  const url = "https://yum-web-application.onrender.com"
 
   useEffect(() => {
     readRecipe()
   }, [])
 
   const readRecipe = () => {
-    fetch('http://localhost:3000/recipes')
+    fetch('https://yum-web-application.onrender.com/recipes')
       .then((response) => response.json())
       .then((payload) => {
         setRecipes(payload)
@@ -36,7 +36,7 @@ const App = () => {
   }
 
   const createRecipe = (recipe) => {
-    fetch("http://localhost:3000/recipes", {
+    fetch("https://yum-web-application.onrender.com/recipes", {
       body: JSON.stringify(recipe),
       headers: {
         "Content-Type": "application/json"
@@ -49,7 +49,7 @@ const App = () => {
   }
 
   const updateRecipe = (recipe, id) => {
-    fetch(`http://localhost:3000/recipes/${id}`, {
+    fetch(`https://yum-web-application.onrender.com/recipes/${id}`, {
       body: JSON.stringify(recipe),
       headers: {
         "Content-Type": "application/json"
@@ -62,7 +62,7 @@ const App = () => {
   }
 
   const deleteRecipe = (id) => {
-    fetch(`http://localhost:3000/recipes/${id}`, {
+    fetch(`https://yum-web-application.onrender.com/recipes/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
