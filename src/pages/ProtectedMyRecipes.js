@@ -13,35 +13,47 @@ const ProtectedMyRecipes = ({ recipes, currentUser, deleteRecipe }) => {
     }
 
     return (
-        <div className="recipe-index">
-            <h2 className="recipe-index-heading"> Checkout some recipes</h2>
-            <div className="recipe-list">
-                {recipes.map((recipe, index) => (
-                    <div className="recipe-card" key={index}>
-                        <img src={recipe.image} alt={recipe.title} className="recipe-image" />
-                        <div className="recipe-details">
-                            <h2 className="recipe-title">{recipe.title}</h2>
-                        </div>
-                        <NavLink to={`/recipeshow/${recipe.id}`}>
-                        <button type="button">View Recipe</button>
-                        </NavLink>
-                        <div className="show-buttons">
-                            <NavLink to={`/recipeedit/${recipe.id}`}>
-                            <button type="button" className="button">
-                                Change Recipe
-                            </button>
-                            </NavLink>
-                            <button type="button" className="button" onClick={() => handleDelete(recipe.id)}>
-                                Delete Recipe
-                            </button>
-                        </div>
-                    </div>
-
-                ))}
-            </div>
-
-
+        <>
+        <section className="protected-index-background">
+        <h1 className="header-pro-index">
+          <span className="Yum-index">Yum</span>my ideas
+        </h1>
+        <div className="recipe-list">
+          {recipes.map((recipe, index) => (
+            <>
+              <div className="recipe-card-protected" key={index}>
+                <NavLink to={`/recipeshow/${recipe.id}`}>
+                  <img
+                    src={recipe.image}
+                    alt={recipe.title}
+                    className="card-image-protected"
+                  />
+                </NavLink>
+                <div className="text-overlay">
+                  <h2 className="recipe-protected-title">{recipe.title}</h2>
+                </div>
+                <div className="link-button-container-protected">
+                  <div className="show-buttons">
+                    <NavLink to={`/recipeedit/${recipe.id}`}>
+                      <button type="button" className="button-protected">
+                        Change Recipe
+                      </button>
+                    </NavLink>
+                    <button
+                      type="button"
+                      className="button-protected"
+                      onClick={() => handleDelete(recipe.id)}
+                    >
+                      Delete Recipe
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
+      </section>
+    </>
     )
 
 }

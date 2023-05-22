@@ -400,3 +400,75 @@ font-size: 25px;
 .Yum-index{
   color: #E8D000;
 }
+/* Start of styling for portected Index Page*/
+
+.button-protected{
+  height: 2rem;
+  width: 7rem;
+  font-size: 14px;
+  font-family: "Cormorant", serif;
+  font-weight: bolder;
+  background-color:#fff59e;
+  color:rgba(0, 0, 0, 0.811);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 10px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.button-protected:hover {
+  cursor: pointer;
+  background-color: #fff59ec1;
+  transition: 0.25s ease;
+}
+
+.link-button-container-protected{
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+  height: 3rem;
+  margin-top: 5px;
+}
+
+.header-pro-index{
+  color: #b06f6f;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 7rem;
+  font-family:  "Cormorant", serif;
+  margin-left: 10rem;
+  margin-top: -25rem;
+}
+
+.recipe-protected-title{
+  font-family:  "Cormorant", serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 29px;
+}
+
+.recipe-card-protected{
+  width: 400px;
+  height: 450px;
+  margin-right: 5rem;
+  margin-top: 10rem;
+  text-align: center;
+  background-color: rgba(57, 57, 57, 0);
+  border-top: 3px solid rgba(57, 57, 57, 0);
+  transition: transform 0.25s ease-in-out;
+  opacity: .7;
+}
+
+.recipe-card-protected:hover{
+  transform: scale(1.1) ;
+  transition: .25s ease-in-out;
+  opacity: 1.0;
+}
+ 
+.card-image-protected{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
