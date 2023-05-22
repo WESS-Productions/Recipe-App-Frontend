@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Eddie from "../assests/Eddie.png"
+import eddie from "../assests/eddie.png"
 import sam from "../assests/sam.png"
 import spencer from "../assests/spencer.png"
 import wags from "../assests/wags.png"
@@ -62,7 +62,7 @@ const AboutUs = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="intext-link">
-              <img src={Eddie} alt="eddie" className="eddie"/>
+              <img src={eddie} alt="eddie" className="eddie"/>
               </a>
             </div>
             <div className="text-card">
