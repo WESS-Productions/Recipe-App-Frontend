@@ -4,8 +4,8 @@ import instructorimage from "../assests/instructorimage.png"
 const NotFound = () => {
   return (
     <>
-      <div className="container">
-        <div className="picture-container">
+      <div className="container-not-found">
+        <div className="picture-container-nf">
           <img src={instructorimage}></img>
           
         </div>
