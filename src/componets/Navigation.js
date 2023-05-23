@@ -49,7 +49,7 @@ const Navigation = ({ current_user, logout }) => {
               </NavItem>
               <NavItem className="nav-item-spacing">
                 <NavLink to="/recipenew" className="nav-link-styles">
-                  Add A New Recipe
+                  Add Recipe
                 </NavLink>
               </NavItem>
               <NavItem className="nav-item-spacing">
