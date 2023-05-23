@@ -31,7 +31,7 @@ const SignUp = ({ signup }) => {
     <>
     <div className="sign-up-container">
       <div className="sign-up">
-        <form ref={formRef} onSubmit={handleSubmit} className="form">
+        <form ref={formRef} onSubmit={handleSubmit} className="sign-up">
           <p className="form-row" style={{marginTop: "2.5rem"}}>Email</p>
           <div className="form-row-placeholder">
           <input type="email" name='email' placeholder="email" />
