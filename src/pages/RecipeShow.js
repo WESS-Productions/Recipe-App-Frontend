@@ -37,7 +37,7 @@ const RecipeShow = ({ recipes }) => {
           <h3 style={{ textDecoration: "underline", marginRight:"12rem"}} id="headers-show">
             Ingredients
           </h3>
-          <ul style={{marginRight:"12rem"}}>{currentRecipe.ingredients}</ul>
+          <p style={{marginRight:"12rem"}}>{currentRecipe.ingredients}</p>
         </div>
       </div>
       <div className="instructions-section">
