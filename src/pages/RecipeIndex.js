@@ -20,13 +20,13 @@ const RecipeIndex = ({ recipes }) => {
         <>
             <h1 className="header-index"><span className="Yum-index">Yum</span>my ideas</h1>
 
-            <div>
-                <input placeholder="Enter An Ingredient" onChange={handleChange} />
+            <div className="search-bar">
+                <input className="search-bar-input" placeholder="Enter An Ingredient" onChange={handleChange} />
             </div>
 
-            <div>
-                <input type="checkbox" id="checkbox" onChange={handleVeggieChange}/>
-                <label htmlFor="checkbox">Show only vegetarian recipes</label>
+            <div className="search-bar">
+                <input style={{marginTop:"-15px"}}   type="checkbox" id="checkbox" onChange={handleVeggieChange}/>
+                <label className="veg-option" style={{marginTop:"-15px"}} htmlFor="checkbox">Show only vegetarian recipes</label>
             </div>
 
             <div className="recipe-list">
