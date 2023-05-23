@@ -13,6 +13,7 @@ import {
   CardText,
   Button,
 } from "reactstrap"
+import { NavLink } from "react-router-dom"
 
 const items = [
   {
@@ -31,6 +32,18 @@ const items = [
     src: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJlYWtmYXN0fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     altText: "Slide 3",
     caption: "Blueberry Banana French Toast",
+    // key: 3,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1606374894242-19110fdbd56c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80",
+    altText: "Slide 4",
+    caption: "CAST IRON NY CUT",
+    // key: 3,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    altText: "Slide 5",
+    caption: "Salmon Kazari Maki Sushi",
     // key: 3,
   },
 ]
@@ -57,10 +70,10 @@ const RecipeHome = ({login, recipes, currentUser}) => {
   const cards = recipes.map((recipes) => {
     return(
       <Card
+        className="card-image-home"
         style={{
           width: "20rem",
           height: "18rem"
-       
         }}
       >
         <img alt="Sample" src={recipes.image} className="card-image"/>

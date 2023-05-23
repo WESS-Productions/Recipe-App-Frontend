@@ -14,7 +14,7 @@ const Login = ({ login, deleteRecipe }) => {
     };
 
     await login(userInfo);
-    navigate('/');
+    navigate('/protectedmyrecipes');
     e.target.reset();
   };
 

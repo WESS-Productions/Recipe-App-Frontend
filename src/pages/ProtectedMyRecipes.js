@@ -15,9 +15,11 @@ const ProtectedMyRecipes = ({ recipes, currentUser, deleteRecipe }) => {
     return (
         <>
         <section className="protected-index-background">
+        <div className="header-container">
         <h1 className="header-pro-index">
           <span className="Yum-index">Yum</span>my ideas
         </h1>
+        </div>
         <div className="recipe-list">
           {recipes.map((recipe, index) => (
             <>
