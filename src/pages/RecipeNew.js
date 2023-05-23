@@ -37,7 +37,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-title">Title</Label>
           <Input
-          id="recipe-title"
+          id="recipe-add"
           name="title"
           placeholder="Enter Title"
           type="text"
@@ -49,7 +49,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-ingredients">Ingredients</Label>
           <Input
-          id="recipe-ingredients"
+          id="recipe-add"
           name="ingredients"
           placeholder="Enter Ingredients"
           type="text"
@@ -61,7 +61,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-instructions">Instructions</Label>
           <Input
-          id="recipe-instructions"
+          id="recipe-add"
           name="instructions"
           placeholder="Enter Instructions"
           type="text"
@@ -73,7 +73,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-vegetarian">Vegetarian</Label>
           <Input
-          id="recipe-vegetarian"
+          id="recipe-add"
           name="vegetarian"
           placeholder="Enter if recipe is vegetarian"
           type="text"
@@ -85,7 +85,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-prep-time">Prep Time</Label>
           <Input
-          id="recipe-prep-time"
+          id="recipe-add"
           name="prep_time"
           placeholder="Enter Prep Time"
           type="text"
@@ -97,7 +97,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-cook-time">Cook Time</Label>
           <Input
-          id="recipe-cook-time"
+          id="recipe-add"
           name="cook_time"
           placeholder="Enter Cook Time"
           type="text"
@@ -109,7 +109,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         <FormGroup>
           <Label for="recipe-image">Image</Label>
           <Input
-          id="recipe-image"
+          id="recipe-add"
           name="image"
           placeholder="Enter image source"
           type="text"
@@ -119,7 +119,7 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         </FormGroup>
         
       </Form>
-      <Button className="submit" onClick={handleClick}>Submit</Button>
+      <Button className="button" onClick={handleClick}>Submit</Button>
       </div> 
       </div>  
     </>

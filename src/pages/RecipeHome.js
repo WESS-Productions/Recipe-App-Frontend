@@ -37,7 +37,7 @@ const items = [
   {
     src: "https://images.unsplash.com/photo-1606374894242-19110fdbd56c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80",
     altText: "Slide 4",
-    caption: "CAST IRON NY CUT",
+    caption: "Cast Iron NY Cut",
     // key: 3,
   },
   {

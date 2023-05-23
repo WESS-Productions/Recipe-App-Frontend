@@ -586,3 +586,7 @@ font-size: 25px;
     color: white;
     font-size: 150px;
   }
+
+  #recipe-add{
+    width:8rem;
+  }
