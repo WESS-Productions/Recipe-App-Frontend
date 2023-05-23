@@ -23,7 +23,7 @@ const RecipeShow = ({ recipes }) => {
       <div >
         {currentRecipe && (<>
       <div className="details-section">
-        <h2 style={{fontSize:"8rem"}}>{currentRecipe.title}</h2>
+        <h2 style={{fontSize:"6rem"}}>{currentRecipe.title}</h2>
       </div>
       <div className="container-show">
         <div className="picture-section" id="backgroundDiv">
