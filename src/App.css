@@ -161,6 +161,13 @@ section .cards .text-card h3 {
   text-align: right;
 }
 
+.container-show{
+  display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
 .details-section {
   text-align: center;
   font-size: 2rem;
