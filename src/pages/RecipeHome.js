@@ -103,7 +103,9 @@ const RecipeHome = ({login, recipes, currentUser}) => {
   return (
     <>
     <div className="home-page-top">
-      <Login login={login}/>
+    {!currentUser && (
+            <Login login={login}/>
+          )}
       <Carousel
         activeIndex={activeIndex}
         next={next}
