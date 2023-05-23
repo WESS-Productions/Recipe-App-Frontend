@@ -12,7 +12,7 @@ const RecipeShow = ({ recipes }) => {
       
       <style>
         {`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat:wght@300&family=Mulish:wght@600;800&family=Roboto:wght@700&display=swap');
+
         #backgroundDiv {
           background-image: url('${currentRecipe?.image}');
           background-size: cover;
@@ -34,10 +34,10 @@ const RecipeShow = ({ recipes }) => {
         </div>
 
         <div className="ingredients-section">
-          <h3 style={{ textDecoration: "underline", marginRight:"6rem"}} id="headers-show">
+          <h3 style={{ textDecoration: "underline", marginRight:"12rem"}} id="headers-show">
             Ingredients
           </h3>
-          <ul style={{marginRight:"6rem"}}>{currentRecipe.ingredients}</ul>
+          <ul style={{marginRight:"12rem"}}>{currentRecipe.ingredients}</ul>
         </div>
       </div>
       <div className="instructions-section">
