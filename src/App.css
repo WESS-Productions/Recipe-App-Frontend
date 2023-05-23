@@ -1,3 +1,4 @@
+
 /* Start of the styling for the header */
 .header {
   background-color: #eeeeee;
@@ -34,6 +35,8 @@
 
 body {
   background-color: #eeeeee;
+  cursor: url("./assests/cursor.png")  8 8,
+  auto;
 }
 
 img {
@@ -247,9 +250,9 @@ section .cards .text-card h3 {
 
 .carousel {
   background-color: #9e6262;
-  width: 40rem;
+  width: 45rem;
   margin: 2rem 5rem auto;
-  margin-left: 12rem;
+  margin-left: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,10 +270,19 @@ section .cards .text-card h3 {
   margin-top: 20rem;
 }
 
+.card-image-home:hover{
+opacity: 1 ;
+transition: .25s ease-in-out;
+transform: scale(1.015);
+}
+
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .home-title {
@@ -304,7 +316,7 @@ section .cards .text-card h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-right: 15rem;
+  margin-right: 10rem;
   margin-top: 5rem;
   background-color: #eeeeee;
   padding: 20px;
@@ -359,7 +371,7 @@ section .cards .text-card h3 {
 .recipe-card{
   width: 300px;
   height: 350px;
-  margin-right: 10rem;
+  margin-right: 5rem;
   margin-top: 10rem;
   text-align: center;
   background-color: rgb(255, 255, 202);
@@ -437,21 +449,20 @@ font-size: 25px;
   margin-top: 5rem;
   font-size: 7rem;
   font-family:  "Cormorant", serif;
-  margin-left: 10rem;
-  margin-top: -25rem;
+  margin-left: 1.5rem;
 }
 
 .recipe-protected-title{
   font-family:  "Cormorant", serif;
   color: #ffffff;
   font-weight: bold;
-  font-size: 29px;
+  font-size: 27px;
 }
 
 .recipe-card-protected{
   width: 400px;
   height: 450px;
-  margin-right: 5rem;
+  margin-right: 3rem;
   margin-top: 10rem;
   text-align: center;
   background-color: rgba(57, 57, 57, 0);
@@ -471,4 +482,5 @@ font-size: 25px;
     height: 100%;
     object-fit: cover;
   }
+  
   
