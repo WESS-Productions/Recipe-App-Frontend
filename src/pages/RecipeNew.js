@@ -112,7 +112,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
               value={newRecipe.image}
             />
           </FormGroup>
-          <Button className="button" onClick={handleClick}>
+          <Button className="button-new" onClick={handleClick}>
           Submit
         </Button>
         </Form>
