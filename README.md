@@ -70,10 +70,6 @@ Testing played a crucial role in identifying and preventing issues, ensuring the
 
 The Yum Recipe App is deployed on the Render cloud platform, providing reliable hosting and deployment capabilities.
 
-## Known Issues
-
-As with any software application, the Yum Recipe App may have some known issues. We maintain a list of known issues in the project repository's issue tracker. Feel free to check the tracker for updates and to report any new issues you encounter.
-
 ## Credits
 
 The Yum Recipe App would not have been possible without the contributions and support of the following individuals and resources:
@@ -81,7 +77,8 @@ The Yum Recipe App would not have been possible without the contributions and su
 - Sam Saenz, Lead Tech 
 - Spencer Johnson, Head of UX/UI
 - Eddie Carrion, Project Manager
-- Wagner Gonzalez, Product Manager
+- Wagner Gonzalez, Product Manager [![GitHub](https://img.shields.io/badge/GitHub-Wagnergon-black?logo=github)](https://github.com/Wagnergon)
+
 
 ## Acknowledgements
 
