@@ -19,7 +19,7 @@ const Footer = () => {
             {/* <br></br> */}
             <NavLink to={'/signup'} className="footer-link-styling"> Sign up </NavLink>
             {/* <br></br> */}
-            <NavLink to={'/login'} className="footer-link-styling"> Login </NavLink>
+            <NavLink to={'/'} className="footer-link-styling"> Login </NavLink>
             <NavLink to={'/'} className="footer-link-styling"> Home </NavLink>
         </footer>
      
