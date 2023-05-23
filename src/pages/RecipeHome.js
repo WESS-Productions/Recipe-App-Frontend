@@ -69,6 +69,7 @@ const RecipeHome = ({login, recipes, currentUser}) => {
 
   const cards = recipes.map((recipes) => {
     return(
+      <NavLink to="/recipeindex">
       <Card
         className="card-image-home"
         style={{
@@ -78,6 +79,7 @@ const RecipeHome = ({login, recipes, currentUser}) => {
       >
         <img alt="Sample" src={recipes.image} className="card-image"/>
       </Card>
+        </NavLink>
    
     )
   })
@@ -136,9 +138,7 @@ const RecipeHome = ({login, recipes, currentUser}) => {
         <h1 className="home-title">Checkout some ideas</h1>
       </div>
       <div className="card-container">
-        <NavLink to="/recipenew">
         {cards}
-        </NavLink>
       </div>
       </div>
     </>
