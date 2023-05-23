@@ -29,25 +29,30 @@ const SignUp = ({ signup }) => {
 
   return (
     <>
+    <div className="sign-up-container">
       <div className="sign-up">
         <form ref={formRef} onSubmit={handleSubmit} className="form">
-          <div className="form-row">
-          <label>Email:</label> <input type="email" name='email' placeholder="email" />
+          <p className="form-row" style={{marginTop: "2.5rem"}}>Email</p>
+          <div className="form-row-placeholder">
+          <input type="email" name='email' placeholder="email" />
           </div>
           <br />
-          <div className="form-row">
-          <label>Password:</label> <input type="password" name='password' placeholder="password" />
+          <p className="form-row">Password</p>
+          <div className="form-row-placeholder">
+          <input type="password" name='password' placeholder="password" />
           </div>
           <br />
-          <div className="form-row">
-          <label>Confirm Password:</label> <input type="password" name='confirm_password' placeholder="password" />
+          <p className="form-row">Confirm Password</p>
+          <div className="form-row-placeholder">
+          <input type="password" name='confirm_password' placeholder="password" />
           </div>
           <br />
-          <input className="submit-button" type='submit' value="Login" />
+          <input className="button" style={{color:"white"}} type='submit' value="login" />
         </form>
         <br />
-        <div className="sign-up-words">Already registered? <a href="/signup">Login Now!</a> </div>
+        <div className="sign-up-words">Already registered? <a href="/signup" style={{textDecoration:"none"}}>Login Now!</a> </div>
       </div>
+    </div>
     </>
   );
 }

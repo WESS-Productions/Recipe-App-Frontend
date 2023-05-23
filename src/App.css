@@ -206,7 +206,6 @@ section .cards .text-card h3 {
 }
 
 .button:hover {
-  cursor: pointer;
   background-color: #b06f6fbc;
   transition: 0.25s;
 }
@@ -340,13 +339,15 @@ transform: scale(1.015);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: none;
   border-radius: 10px;
- 
+  cursor: url("./assests/cursor.png")  8 8,
+  auto;
 }
 
 .button-login:hover {
-  cursor: pointer;
   background-color: #b06f6fbc;
   transition: 0.25s ease;
+  cursor: url("./assests/cursor.png")  8 8,
+  auto;
 }
 
 .login-line{
@@ -430,7 +431,6 @@ font-size: 25px;
 }
 
 .button-protected:hover {
-  cursor: pointer;
   background-color: #fff59ec1;
   transition: 0.25s ease;
 }
@@ -483,4 +483,30 @@ font-size: 25px;
     object-fit: cover;
   }
   
-  
+  /* Start of styles for sign up */
+
+  .sign-up-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign-up{
+    margin: 2rem;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 35rem;
+    width: 40rem;
+    background-color: #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .form-row{
+    font-family:"Cormorant", serif; 
+    font-size: 1.5rem;
+  }
+
+  .form-row-placeholder{
+    font-size: 1.25rem;
+  }
