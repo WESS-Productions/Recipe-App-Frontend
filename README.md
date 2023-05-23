@@ -77,7 +77,8 @@ The Yum Recipe App would not have been possible without the contributions and su
 - Sam Saenz, Lead Tech 
 - Spencer Johnson, Head of UX/UI
 - Eddie Carrion, Project Manager
-- Wagner Gonzalez, Product Manager [![GitHub](https://img.shields.io/badge/GitHub-Wagnergon-black?logo=github)](https://github.com/Wagnergon)
+- Wagner Gonzalez, Product Manager [![GitHub](https://img.shields.io/badge/GitHub-Wagnergon-black?style=flat-square&logo=github)](https://github.com/Wagnergon)
+
 
 
 ## Acknowledgements
