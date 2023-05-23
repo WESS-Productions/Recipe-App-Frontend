@@ -20,7 +20,7 @@ const RecipeShow = ({ recipes }) => {
         }
         `}
       </style>
-      <div>
+      <div className="container-show">
         {currentRecipe && (<>
       <div className="details-section">
         <h2>{currentRecipe.title}</h2>
