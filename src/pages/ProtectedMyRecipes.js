@@ -21,7 +21,7 @@ const ProtectedMyRecipes = ({ recipes, currentUser, deleteRecipe }) => {
         </h1>
         </div>
         <div className="recipe-list">
-          {recipes.map((recipe, index) => (
+          {recipes.filter(recipe => recipe.user_id === currentUser.id).map((recipe, index) => (
             <>
               <div className="recipe-card-protected" key={index}>
                 <NavLink to={`/recipeshow/${recipe.id}`}>
