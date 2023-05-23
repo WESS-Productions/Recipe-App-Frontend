@@ -166,7 +166,7 @@ section .cards .text-card h3 {
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
-margin-top: 6rem;
+margin-top: 3rem;
 }
 
 .details-section {
@@ -226,7 +226,7 @@ margin-top: 6rem;
   height: 40rem;
   margin: 0 auto;
   margin-left: 5rem;
-  margin-right: 20rem;
+  margin-right: 5rem;
   margin-top: none;
   display: inline-block;
   font-size: 20px;
