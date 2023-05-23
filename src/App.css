@@ -586,3 +586,19 @@ font-size: 25px;
     color: white;
     font-size: 150px;
   }
+
+  .button-new{
+    height: 3rem;
+    width: 8rem;
+    font-size: 16px;
+    font-family: "Cormorant", serif;
+    font-weight: bolder;
+    background-color: #b06f6f;
+    border: none;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
