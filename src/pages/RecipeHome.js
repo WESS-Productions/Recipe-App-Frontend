@@ -136,7 +136,9 @@ const RecipeHome = ({login, recipes, currentUser}) => {
         <h1 className="home-title">Checkout some ideas</h1>
       </div>
       <div className="card-container">
+        <NavLink to="/recipenew">
         {cards}
+        </NavLink>
       </div>
       </div>
     </>
