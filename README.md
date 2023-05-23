@@ -74,10 +74,14 @@ The Yum Recipe App is deployed on the Render cloud platform, providing reliable 
 
 The Yum Recipe App would not have been possible without the contributions and support of the following individuals and resources:
 
-- Sam Saenz, Lead Tech 
-- Spencer Johnson, Head of UX/UI
-- Eddie Carrion, Project Manager
-- Wagner Gonzalez, Product Manager [![GitHub](https://img.shields.io/badge/GitHub-Wagnergon-black?style=flat-square&logo=github)](https://github.com/Wagnergon)
+- [![Sam Saenz's GitHub Profile](https://img.shields.io/badge/Sam%20Saenz-GitHub-<Green>?style=flat-square&logo=github)](https://github.com/sam-saenz)
+Sam Saenz, Lead Tech 
+- [![Spencer Johnson's GitHub Profile](https://img.shields.io/badge/Spencer%20Johnson-GitHub-<Blue>?style=flat-square&logo=github)](https://github.com/Spencerj1297)
+Spencer Johnson, Head of UX/UI
+- [![Eddie Carrion's GitHub Profile](https://img.shields.io/badge/Eddie%20Carrion-GitHub-<Red>?style=flat-square&logo=github)](https://github.com/EddieCarrion)
+Eddie Carrion, Project Manager
+- [![Wagner Gonzalez's GitHub Profile](https://img.shields.io/badge/Wagner%20Gonzalez-GitHub-<Purple>?style=flat-square&logo=github)](https://github.com/wagnergon)
+Wagner Gonzalez, Product Manager 
 
 
 
