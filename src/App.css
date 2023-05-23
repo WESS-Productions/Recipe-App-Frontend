@@ -588,5 +588,7 @@ font-size: 25px;
   }
 
   #recipe-add{
-    width:8rem;
+    width:30rem;
+    text-align: center;
+    align-self: center;
   }
