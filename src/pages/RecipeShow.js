@@ -20,12 +20,12 @@ const RecipeShow = ({ recipes }) => {
         }
         `}
       </style>
-      <div className="container-show">
+      <div >
         {currentRecipe && (<>
       <div className="details-section">
         <h2>{currentRecipe.title}</h2>
       </div>
-      <div>
+      <div className="container-show">
         <div className="picture-section" id="backgroundDiv">
           <div className="time-section">
             <p>Prep time: {currentRecipe.prep_time}</p>
