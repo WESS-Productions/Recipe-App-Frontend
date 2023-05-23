@@ -28,9 +28,11 @@ const RecipeNew = ({createRecipe, currentUser}) => {
   }
     
   return(
-    <>        
+    <>  
+    <div className="sign-up-container">  
+    <div className="sign-up"> 
       <Form 
-      className="new-recipe-form">
+      className="form">
 
         <FormGroup>
           <Label for="recipe-title">Title</Label>
@@ -118,7 +120,10 @@ const RecipeNew = ({createRecipe, currentUser}) => {
         
       </Form>
       <Button className="submit" onClick={handleClick}>Submit</Button>
+      </div> 
+      </div>  
     </>
+    
   )
 }
 
