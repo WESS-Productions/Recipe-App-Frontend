@@ -45,7 +45,7 @@ const RecipeShow = ({ recipes }) => {
           {" "}
           Instructions
         </h3>
-        <p>{currentRecipe.instructions}</p>
+        <p style={{backgroundColor: "#fff59ec1"}}>{currentRecipe.instructions}</p>
       </div>
       </>
 )}
