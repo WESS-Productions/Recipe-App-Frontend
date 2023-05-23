@@ -20,7 +20,7 @@ import { Spinner } from 'reactstrap'
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [recipes, setRecipes] = useState([])
-  const url = "https://yum-web-application-front.onrender.com"
+  const url = "https://yum-web-application.onrender.com"
 
   useEffect(() => {
     readRecipe()
