@@ -50,7 +50,7 @@ const SignUp = ({ signup }) => {
           <input className="button" style={{color:"white"}} type='submit' value="login" />
         </form>
         <br />
-        <div className="sign-up-words">Already registered? <a href="/signup" style={{textDecoration:"none"}}>Login Now!</a> </div>
+        <div className="sign-up-words">Already registered? <a href="/" style={{textDecoration:"none"}}>Login Now!</a> </div>
       </div>
     </div>
     </>
