@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom"
 
 const ProtectedMyRecipes = ({ recipes, currentUser, deleteRecipe }) => {
 
+    console.log(currentUser);
+
     const navigate = useNavigate()
 
     const handleDelete = (id) => {
