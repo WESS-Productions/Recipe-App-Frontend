@@ -43,6 +43,11 @@ const Navigation = ({ current_user, logout }) => {
                 </NavLink>
               </NavItem>
               <NavItem className="nav-item-spacing">
+                <NavLink to="/myfavorites" className="nav-link-styles">
+                  My Favorites
+                </NavLink>
+              </NavItem>
+              <NavItem className="nav-item-spacing">
                 <NavLink to="/recipeindex" className="nav-link-styles">
                   Current Recipes
                 </NavLink>
