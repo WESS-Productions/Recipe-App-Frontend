@@ -15,7 +15,7 @@ describe("<Header/>", () => {
         
       
     )
-    const element = screen.getByText(/Yum/i)
+    const element = screen.getByText(/Current Recipes/i)
     expect(element).toBeInTheDocument()
   })
 
