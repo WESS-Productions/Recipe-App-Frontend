@@ -29,7 +29,23 @@ const AboutUs = () => {
   return (
     <>  
       <section>
-        <h1>Meet the YUM Team.</h1>
+        <span className="about-us-spans">M</span>
+        <span className="about-us-spans">e</span>
+        <span className="about-us-spans">e</span>
+        <span className="about-us-spans">t</span>
+        <span className="about-us-spans-period">.</span>
+        <span className="about-us-spans"></span>
+        <span className="about-us-spans">t</span>
+        <span className="about-us-spans">h</span>
+        <span className="about-us-spans">e</span>
+        <span className="about-us-spans-period"></span>
+        <div className="dark-logo-container">
+          <image className="dark-logo"/> 
+        </div>
+      <span className="about-us-spans">T</span>
+      <span className="about-us-spans">e</span>
+      <span className="about-us-spans">a</span>
+      <span className="about-us-spans">m</span>
       </section>
       <section>
         <div className="container reveal">
