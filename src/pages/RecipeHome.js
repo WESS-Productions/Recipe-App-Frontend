@@ -106,33 +106,38 @@ const RecipeHome = ({login, recipes, currentUser}) => {
     <>
     <div className="home-page-top">
     {!currentUser && (
+      <>
             <Login login={login}/>
+            <Carousel
+            activeIndex={activeIndex}
+            next={next}
+            previous={previous}
+            {...items}
+            className="carousel"
+          >
+            <CarouselIndicators
+              items={items}
+              activeIndex={activeIndex}
+              onClickHandler={goToIndex}
+            />
+            {slides}
+            <CarouselControl
+              direction="prev"
+              directionText="Previous"
+              onClickHandler={previous}
+            />
+            <CarouselControl
+              direction="next"
+              directionText="Next"
+              onClickHandler={next}
+            />
+          </Carousel>
+          </>
           )}
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        {...items}
-        className="carousel"
-      >
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
       </div>
+      {currentUser && (
+      <h1 className="welcome-protected">Welcome</h1>
+      )}
       <div className="home-index-container">
       <div>
         <h1 className="home-title">Checkout some ideas</h1>

@@ -444,6 +444,13 @@ font-size: 25px;
 }
 /* Start of styling for portected Index Page*/
 
+.welcome-protected{
+  font-size: 12rem;
+  text-align: center;
+  margin-bottom: -12rem;
+  font-family: "Cormorant", serif;
+}
+
 .button-protected{
   height: 2rem;
   width: 7rem;
@@ -636,4 +643,3 @@ font-size: 25px;
   font-family: "Cormorant", serif; 
   font-size: 1.2rem;
 }
-
