@@ -6,6 +6,7 @@ import RecipeEdit from './pages/RecipeEdit'
 import RecipeShow from './pages/RecipeShow'
 import RecipeIndex from './pages/RecipeIndex'
 import ProtectedMyRecipes from './pages/ProtectedMyRecipes'
+import MyFavorites from './pages/MyFavorites';
 import LogIn from './componets/LogIn'
 import SignUp from './componets/SignUp'
 import AboutUs from './pages/AboutUs'
@@ -59,6 +60,17 @@ const App = () => {
       .then((response) => response.json())
       .then((payload) => readRecipe())
       .catch((errors) => console.log("Recipe update errors:", errors))
+  }
+
+  const updateUser = (user, id) => {
+    fetch(`${url}/users/${id}`, {
+      body: JSON.stringify(user),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
   }
 
   const deleteRecipe = (id) => {
@@ -143,13 +155,14 @@ const App = () => {
       <Routes>
         <Route path='/' element={<RecipeHome login={login} recipes={recipes} currentUser={currentUser}/>} />
         <Route path='/recipeindex' element={<RecipeIndex recipes={recipes} />} />
-        <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes} />} />
+        <Route path='/recipeshow/:id' element={<RecipeShow recipes={recipes} currentUser={currentUser} updateUser={updateUser}/>} />
         <Route path='/recipenew' element={<RecipeNew createRecipe={createRecipe} currentUser={currentUser} />} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/signup' element={<SignUp signup={signup}/>} />
         <Route path='/login' element={<LogIn login={login} deleteRecipe={deleteRecipe} />} />
         <Route path='/recipeedit/:id' element={<RecipeEdit recipes={recipes} currentUser={currentUser} updateRecipe={updateRecipe} />} />
         <Route path='/protectedmyrecipes' element={<ProtectedMyRecipes recipes={recipes} currentUser={currentUser} deleteRecipe={deleteRecipe} />} />
+        <Route path='/myfavorites' element={<MyFavorites recipes={recipes} currentUser={currentUser} />} />
         <Route path='/notfound' element={<NotFound />} />
         <Route path='/navigation' element={<Navigation current_user={currentUser}/>} />
         <Route path='/header' element={<Header current_user={currentUser}/>} />

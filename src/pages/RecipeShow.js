@@ -1,10 +1,21 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
-const RecipeShow = ({ recipes }) => {
+const RecipeShow = ({ recipes, currentUser, updateUser }) => {
   const { id } = useParams()
   console.log(recipes)
   const currentRecipe = recipes?.find((recipe) => recipe.id === +id)
+
+  const handleClick = () => {
+    if(currentUser.favorites.includes(currentRecipe.id.toString())){
+      currentUser.favorites.splice(currentUser.favorites.indexOf(currentRecipe.id.toString()), 1)
+      updateUser(currentUser, currentUser.id)
+    }
+    else{
+      currentUser.favorites.push(currentRecipe.id.toString())
+      updateUser(currentUser, currentUser.id)
+    }
+  }
 
   return (
 
@@ -47,6 +58,9 @@ const RecipeShow = ({ recipes }) => {
         </h3>
         <p style={{backgroundColor: "#fff59ec1"}}>{currentRecipe.instructions}</p>
       </div>
+      {currentUser && (
+            <button onClick={handleClick}>Favorite</button>
+          )}
       </>
 )}
       </div>
