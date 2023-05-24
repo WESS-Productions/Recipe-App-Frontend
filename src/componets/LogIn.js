@@ -42,7 +42,7 @@ const Login = ({ login, deleteRecipe }) => {
         <Input type='password' id='password' name='password' placeholder='Enter your password' />
       </FormGroup>
       <br />
-      <button className='button-login' block>login</button>
+      <button className='button-login' block="true">login</button>
     </Form>
   );
 };

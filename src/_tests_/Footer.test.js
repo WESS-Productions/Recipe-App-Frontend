@@ -6,16 +6,14 @@ describe("<Footer/>", () => {
   it("renders information without error", () => {
     render(
         <BrowserRouter>
-
         <Footer />
-        
         </BrowserRouter>
         
         
         
       
     )
-    const element = screen.getByText(/WESS Productions/i)
+    const element = screen.getByText(/About us/i)
     expect(element).toBeInTheDocument()
   })
 
