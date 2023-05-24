@@ -33,21 +33,21 @@ const SignUp = ({ signup }) => {
       <div className="sign-up">
         <form ref={formRef} onSubmit={handleSubmit} className="form">
           <p className="form-row" style={{marginTop: "2.5rem"}}>Email</p>
-          <div className="form-row-placeholder">
-          <input type="email" name='email' placeholder="email" />
+          <div className="placeholder">
+          <input type="email" name='email' placeholder="email" className="placeholder-inside" />
           </div>
           <br />
           <p className="form-row">Password</p>
-          <div className="form-row-placeholder">
-          <input type="password" name='password' placeholder="password" />
+          <div className="placeholder">
+          <input type="password" name='password' placeholder="password" className="placeholder-inside" />
           </div>
           <br />
           <p className="form-row">Confirm Password</p>
-          <div className="form-row-placeholder">
-          <input type="password" name='confirm_password' placeholder="password" />
+          <div className="placeholder">
+          <input type="password" name='confirm_password' placeholder="password" className="placeholder-inside" />
           </div>
           <br />
-          <input className="button" style={{color:"white"}} type='submit' value="login" />
+          <input className="button" style={{color:"white", marginBottom:"3rem"}} type='submit' value="login" />
         </form>
         <br />
         <div className="sign-up-words">Already registered? <a href="/" style={{textDecoration:"none"}}>Login Now!</a> </div>
