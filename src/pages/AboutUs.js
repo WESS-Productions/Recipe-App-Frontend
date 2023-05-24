@@ -46,7 +46,7 @@ const AboutUs = () => {
             </div>
             <div className="text-card">
               <h3>Tech Lead</h3>
-              <p>Hi, Thank you for checking out our webpage and we hope you enjoyed YUM! During the course of development for YUM I was the lead for Tech and version control. The day-to-day in this role consited of coding guidance and ensuring approraite merging to our GitHub Repo. If you have any questions dont hesitate to reach out on LinkedIN. Also you can checkout all the team members Github's at the bottom of the page! </p>
+              <p>Thank you for checking out our webpage, we hope you enjoy our project. As the tech lead during the development of YUM, I was in charge of version control and git management. My daily responsibilities in this role consisted of providing coding guidance for the team and managing use of our Github repository. If you would like to reach out, you can contact me on LinkedIN. The Github profile for each team member can also be found at the bottom of this page.</p>
             </div>
            
           </div>
