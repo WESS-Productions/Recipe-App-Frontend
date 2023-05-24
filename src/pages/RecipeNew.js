@@ -27,10 +27,10 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
 
   return (
     <>
-      <div className="sign-up-container">
-        <Form className="sign-up">
+      <div className="new-container">
+        <Form className="new">
           <FormGroup>
-            <Label for="recipe-title">Title</Label>
+            <Label for="recipe-title" className="recipe-add-lines">Title</Label>
             <Input
               id="recipe-add"
               name="title"
@@ -42,7 +42,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-ingredients">Ingredients</Label>
+            <Label for="recipe-ingredients" className="recipe-add-lines">Ingredients</Label>
             <Input
               id="recipe-add"
               name="ingredients"
@@ -54,7 +54,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-instructions">Instructions</Label>
+            <Label for="recipe-instructions" className="recipe-add-lines">Instructions</Label>
             <Input
               id="recipe-add"
               name="instructions"
@@ -66,7 +66,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-vegetarian">Vegetarian</Label>
+            <Label for="recipe-vegetarian" className="recipe-add-lines">Vegetarian</Label>
             <Input
               id="recipe-add"
               name="vegetarian"
@@ -78,7 +78,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-prep-time">Prep Time</Label>
+            <Label for="recipe-prep-time" className="recipe-add-lines">Prep Time</Label>
             <Input
               id="recipe-add"
               name="prep_time"
@@ -90,7 +90,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-cook-time">Cook Time</Label>
+            <Label for="recipe-cook-time" className="recipe-add-lines">Cook Time</Label>
             <Input
               id="recipe-add"
               name="cook_time"
@@ -102,7 +102,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
           </FormGroup>
 
           <FormGroup>
-            <Label for="recipe-image">Image</Label>
+            <Label for="recipe-image" className="recipe-add-lines">Image</Label>
             <Input
               id="recipe-add"
               name="image"
@@ -112,7 +112,7 @@ const RecipeNew = ({ createRecipe, currentUser }) => {
               value={newRecipe.image}
             />
           </FormGroup>
-          <Button className="button-new" onClick={handleClick}>
+          <Button className="button-new" style={{backgroundColor:"#b06f6f", fontFamily: "Cormorant, serif", border:"none", fontSize:"1.20rem",}} onClick={handleClick}>
           Submit
         </Button>
         </Form>
