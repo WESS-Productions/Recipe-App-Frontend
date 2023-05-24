@@ -1,11 +1,16 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from  '@testing-library/react'
+import RecipeHome from '../pages/RecipeHome'
+import { BrowserRouter } from 'react-router-dom'
 
-import RecipeHome from "../pages/RecipeHome"
+    describe('<RecipeHome />', () => {
+      it('renders without crashing', () => {
+        render(
+          <BrowserRouter>
+          <RecipeHome />
+          </BrowserRouter>
+        )
 
-describe("<RecipeHome/>", () => {
-  it("renders information without error", () => {
-    render(<RecipeHome />)
-    const element = screen.getByText(/Checkout some recipes/i)
-    expect(element).toBeInTheDocument()
+        const text = screen.getByText(/Checkout some ideas/i)
+        expect(text).toBeInTheDocument()
+        })
   })
-})
