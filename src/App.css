@@ -670,3 +670,8 @@ font-size: 25px;
   .search-bar-input{
     border-radius:0.375rem ;
   }
+
+  .favorite-container{
+    display: flex;
+    justify-content: center;
+  }

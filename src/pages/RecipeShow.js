@@ -38,6 +38,14 @@ const RecipeShow = ({ recipes, currentUser, updateUser }) => {
           <div className="details-section">
             <h2 style={{ fontSize: "6rem" }}>{currentRecipe.title}</h2>
           </div>
+          <div className="favorite-container">
+          {currentUser && (
+            <>
+              <input style={{ marginTop: "-15px" }} type="checkbox" id="checkbox" onChange={handleClick} checked={currentUser.favorites.includes(currentRecipe.id.toString())} />
+              <label className="veg-option" style={{ marginTop: "-15px" }} htmlFor="checkbox">Favorite this recipe</label>
+            </>
+          )}
+          </div>
           <div className="container-show">
             <div className="picture-section" id="backgroundDiv">
               <div className="time-section">
@@ -60,12 +68,7 @@ const RecipeShow = ({ recipes, currentUser, updateUser }) => {
             </h3>
             <p style={{ backgroundColor: "#fff59ec1" }}>{currentRecipe.instructions}</p>
           </div>
-          {currentUser && (
-            <>
-              <input style={{ marginTop: "-15px" }} type="checkbox" id="checkbox" onChange={handleClick} checked={currentUser.favorites.includes(currentRecipe.id.toString())} />
-              <label className="veg-option" style={{ marginTop: "-15px" }} htmlFor="checkbox">Favorite this recipe</label>
-            </>
-          )}
+       
         </>
         )}
       </div>
