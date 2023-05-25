@@ -306,7 +306,7 @@ auto;
 
 .home-index-container {
   background-color: #b06f6f;
-  height: 60rem;
+  height: fit-content;
 }
 
 .card-image {
