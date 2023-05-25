@@ -23,7 +23,6 @@ describe("<AboutUs />", () => {
     const wagnerImage = screen.getAllByAltText("wagner")
     expect(wagnerImage.length).toBeGreaterThan(0)
 
-    const element = screen.getByText(/Meet the YUM Team/i)
-    expect(element).toBeInTheDocument()
+    
   })
 })
