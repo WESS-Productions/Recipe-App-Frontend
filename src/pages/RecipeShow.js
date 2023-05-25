@@ -5,7 +5,7 @@ const RecipeShow = ({ recipes, currentUser, updateUser }) => {
   const { id } = useParams()
   console.log(recipes)
   const currentRecipe = recipes?.find((recipe) => recipe.id === +id)
-  const [checkState, setCheckState] = useState(currentUser.favorites.includes(currentRecipe.id.toString()))
+  const [checkState, setCheckState] = useState(currentUser?.favorites.includes(currentRecipe.id.toString()))
 
   const handleClick = () => {
     if (currentUser.favorites.includes(currentRecipe.id.toString())) {
