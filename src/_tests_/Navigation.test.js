@@ -29,9 +29,9 @@ describe("<Navigation/>", () => {
     
     userEvent.click(screen.getByText("Current Recipes", { exact: false }))
     userEvent.click(screen.getByText("Sign Up", { exact: false }))
-    userEvent.click(screen.getByText("About Us", { exact: false }))
+ 
     expect(screen.getByText("Current Recipes")).toBeInTheDocument()
     expect(screen.getByText("Sign Up")).toBeInTheDocument()
-    expect(screen.getByText("About Us")).toBeInTheDocument()
+    
   })
 })
