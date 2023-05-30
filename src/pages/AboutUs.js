@@ -99,7 +99,7 @@ const AboutUs = () => {
             </div>
             <div className="text-card">
               <h3>Product Manager</h3>
-              <p>Lorem ipsum dolor sit amet, consectttur</p>
+              <p>Welcome to YUM, our delightful webpage dedicated to all things delicious! As the Project Manager during the production phase, my primary role was to ensure smooth communication and coordination among our talented team members. I took charge of maintaining our project management board, ensuring that tasks were assigned, progress was tracked, and deadlines were met. It was a rewarding experience to work on YUM, and I feel privileged to have collaborated with such a dedicated and creative team. If you have any questions or would like to connect, please feel free to reach out to me on LinkedIn. We hope you enjoy exploring YUM and discovering mouthwatering recipes that will satisfy your cravings!</p>
             </div>
           
           </div>
